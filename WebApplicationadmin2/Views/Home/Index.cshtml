@@ -1,0 +1,85 @@
+﻿@model IEnumerable<WebApplicationadmin2.Models.Eleve>
+
+@using Microsoft.AspNet.Identity
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Gestion des etudiants de l'ENSA Tanger</h2>
+@if (Request.IsAuthenticated)
+{
+    <p>
+        @Html.ActionLink("Create New", "Add")
+    </p>
+
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.ID_Eleve)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CNE)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Nom)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Prenom)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Email)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Tel)
+            </th>
+            <th></th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ID_Eleve)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CNE)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Nom)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Prenom)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Email)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Tel)
+                </td>
+                <td>
+                    @Html.ActionLink("Edit", "Update", new { id = @item.ID_Eleve }) |
+                    @Html.ActionLink("Details", "Details", new { id = @item.ID_Eleve }) |
+                    @Html.ActionLink("Delete", "DeleteStudent", new { id = @item.ID_Eleve })
+                </td>
+
+            </tr>
+        }
+
+
+    </table>
+}
+else
+{
+ 
+    <h3>Gestion des étudiants</h3>
+    <form action="IndexSearch">
+        <div class"input-group">
+        <input class="form-control" name="searchTerm" />
+            <div class="input-group-append">
+                <button type="submit" class="btn btn-default">Search</button>
+            </div>
+        </div>
+    </form>
+   
+ 
+}
