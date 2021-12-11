@@ -9,13 +9,13 @@ using System.Text;
 // REMARQUE : vous pouvez utiliser la commande Renommer du menu Refactoriser pour changer le nom de classe "Service" dans le code, le fichier svc et le fichier de configuration.
 public class Service : IService
 {
-	 ENSATEntities db = new ENSATEntities();
+    GINF3Entities db = new GINF3Entities();
     public List<Eleve> GetEleves()
     {
         List<Eleve> eleves = new List<Eleve>();
-        
+
         var x = from n in db.Eleve select n;
-        foreach(var item in x)
+        foreach (var item in x)
         {
             Eleve e = new Eleve();
             e.ID_Eleve = item.ID_Eleve;
@@ -40,7 +40,7 @@ public class Service : IService
         e.Nom = nom;
         e.Email = email;
         e.Photo = photo;
-        e.Tel =tel;
+        e.Tel = tel;
         db.Eleve.Add(e);
         int res = db.SaveChanges();
         return res;
@@ -54,7 +54,7 @@ public class Service : IService
         return res;
     }
 
-  public int UpdateStudent(int id, string cne, string prenom, string nom, string email, byte[] photo, string tel)
+    public int UpdateStudent(int id, string cne, string prenom, string nom, string email, byte[] photo, string tel)
     {
         Eleve e = new Eleve();
         e.ID_Eleve = id;
@@ -71,9 +71,9 @@ public class Service : IService
 
     public Eleve GetStudentById(int i)
     {
-        var list = from k in db.Eleve where k.ID_Eleve==i select k;
+        var list = from k in db.Eleve where k.ID_Eleve == i select k;
         Eleve e = new Eleve();
-        foreach(var item in list)
+        foreach (var item in list)
         {
             e.ID_Eleve = item.ID_Eleve;
             e.CNE = item.CNE;

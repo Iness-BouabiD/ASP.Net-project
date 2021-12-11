@@ -91,7 +91,7 @@
   <xs:element name="GetStudentByCNEResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/" minOccurs="0" name="GetStudentByCNEResult" nillable="true" type="q3:ArrayOfEleve" />
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/" minOccurs="0" name="GetStudentByCNEResult" nillable="true" type="q3:Eleve" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>

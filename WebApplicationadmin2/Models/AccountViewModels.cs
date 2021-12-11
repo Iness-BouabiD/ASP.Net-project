@@ -42,14 +42,14 @@ namespace WebApplicationadmin2.Models
     public class ForgotViewModel
     {
         [Required]
-        [Display(Name = "Courrier électronique")]
+        [Display(Name = "E-mail")]
         public string Email { get; set; }
     }
 
     public class LoginViewModel
     {
         [Required]
-        [Display(Name = "Courrier électronique")]
+        [Display(Name = "E-mail")]
         [EmailAddress]
         public string Email { get; set; }
 
@@ -66,7 +66,7 @@ namespace WebApplicationadmin2.Models
     {
         [Required]
         [EmailAddress]
-        [Display(Name = "Courrier électronique")]
+        [Display(Name = "E-mail")]
         public string Email { get; set; }
 
         [Required]
@@ -85,7 +85,7 @@ namespace WebApplicationadmin2.Models
     {
         [Required]
         [EmailAddress]
-        [Display(Name = "Courrier électronique")]
+        [Display(Name = "E-mail")]
         public string Email { get; set; }
 
         [Required]

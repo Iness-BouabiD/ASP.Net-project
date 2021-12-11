@@ -4,62 +4,33 @@
     ViewBag.Title = "Details";
 }
 
-<h2>Details</h2>
-
-<div>
-    <h4>Eleve</h4>
-    <hr />
-    <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.ID_Eleve)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.ID_Eleve)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.CNE)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.CNE)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Nom)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Nom)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Prenom)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Prenom)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Email)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Email)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Tel)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Tel)
-        </dd>
-
-    </dl>
-</div>
-<p>
-    @Html.ActionLink("Back to List", "Index")
+<h1 class="text-center" style="margin:50px">Détails :</h1>
+<table class="table h4">
+    <tr >
+        <td style="font-weight:bold">@Html.DisplayNameFor(model => model.ID_Eleve) </td>
+        <td>: @Html.DisplayFor(model => model.ID_Eleve)</td>
+    </tr>
+    <tr>
+        <td style="font-weight:bold">@Html.DisplayNameFor(model => model.CNE)</td>
+        <td>: @Html.DisplayFor(model => model.CNE)</td>
+    </tr>
+    <tr>
+        <td style="font-weight:bold">@Html.DisplayNameFor(model => model.Nom)</td>
+        <td>: @Html.DisplayFor(model => model.Nom)</td>
+    </tr>
+    <tr>
+        <td style="font-weight:bold">@Html.DisplayNameFor(model => model.Prenom)</td>
+        <td>:  @Html.DisplayFor(model => model.Prenom)</td>
+    </tr>
+    <tr>
+        <td style="font-weight:bold">@Html.DisplayNameFor(model => model.Email)</tdstyle="font-weight:bold">
+        <td>: @Html.DisplayFor(model => model.Email)</td>
+    </tr>
+    <tr>
+        <td style="font-weight:bold">@Html.DisplayNameFor(model => model.Tel)</td>
+        <td>: @Html.DisplayFor(model => model.Tel)</td>
+    </tr>
+</table>
+<p class="h4">
+    @Html.ActionLink("Revenir à la liste des étudiants", "Index")
 </p>

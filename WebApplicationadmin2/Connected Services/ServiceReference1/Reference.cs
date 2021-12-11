@@ -189,10 +189,10 @@ namespace WebApplicationadmin2.ServiceReference1 {
         System.Threading.Tasks.Task<WebApplicationadmin2.ServiceReference1.Eleve> GetStudentByIdAsync(int e);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/GetStudentByCNE", ReplyAction="http://tempuri.org/IService/GetStudentByCNEResponse")]
-        WebApplicationadmin2.ServiceReference1.Eleve[] GetStudentByCNE(string cne);
+        WebApplicationadmin2.ServiceReference1.Eleve GetStudentByCNE(string cne);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/GetStudentByCNE", ReplyAction="http://tempuri.org/IService/GetStudentByCNEResponse")]
-        System.Threading.Tasks.Task<WebApplicationadmin2.ServiceReference1.Eleve[]> GetStudentByCNEAsync(string cne);
+        System.Threading.Tasks.Task<WebApplicationadmin2.ServiceReference1.Eleve> GetStudentByCNEAsync(string cne);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -262,11 +262,11 @@ namespace WebApplicationadmin2.ServiceReference1 {
             return base.Channel.GetStudentByIdAsync(e);
         }
         
-        public WebApplicationadmin2.ServiceReference1.Eleve[] GetStudentByCNE(string cne) {
+        public WebApplicationadmin2.ServiceReference1.Eleve GetStudentByCNE(string cne) {
             return base.Channel.GetStudentByCNE(cne);
         }
         
-        public System.Threading.Tasks.Task<WebApplicationadmin2.ServiceReference1.Eleve[]> GetStudentByCNEAsync(string cne) {
+        public System.Threading.Tasks.Task<WebApplicationadmin2.ServiceReference1.Eleve> GetStudentByCNEAsync(string cne) {
             return base.Channel.GetStudentByCNEAsync(cne);
         }
     }
