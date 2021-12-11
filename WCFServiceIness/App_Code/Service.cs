@@ -42,6 +42,7 @@ public class Service : IService
         e.Photo = photo;
         e.Tel = tel;
         db.Eleve.Add(e);
+
         int res = db.SaveChanges();
         return res;
     }

@@ -35,14 +35,22 @@ namespace WebApplicationadmin2.Controllers
         {
             var list = obj.GetStudentByCNE(searchTerm);
             Eleve e = new Eleve();
-            e.ID_Eleve = list.ID_Eleve;
-            e.CNE = list.CNE;
-            e.Prenom = list.Prenom;
-            e.Nom = list.Nom;
-            e.Email = list.Email;
-            e.Photo = list.Photo;
-            e.Tel = list.Tel;
-            return View(e);
+            if (list.ID_Eleve == 0)
+            {
+                return View("Index","Home");
+            }
+            else
+            {
+                e.ID_Eleve = list.ID_Eleve;
+                e.CNE = list.CNE;
+                e.Prenom = list.Prenom;
+                e.Nom = list.Nom;
+                e.Email = list.Email;
+                e.Photo = list.Photo;
+                e.Tel = list.Tel;
+                return View(e);
+            }
+            
         }
         public ActionResult Details(int id)
         {
