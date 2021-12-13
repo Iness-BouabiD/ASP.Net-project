@@ -57,7 +57,7 @@
                 <td>
                     @Html.ActionLink("Modifier", "Update", new { id = @item.ID_Eleve }, new { @class = "btn btn-info" }) |
                     @Html.ActionLink("Détails", "Details", new { id = @item.ID_Eleve }, new { @class = "btn btn-info" }) |
-                    @Html.ActionLink("Supprimer", "DeleteStudent", new { id = @item.ID_Eleve }, new { @class = "btn btn-info" })
+                    @Html.ActionLink("Supprimer", "DeleteStudent", new { id = @item.ID_Eleve }, new { @class = "btn btn-info", @onclick = "return confirm('Etes vous sûre de vouloir supprimer cet étudiant ?')" }) 
                 </td>
 
             </tr>
@@ -73,7 +73,7 @@
 else
 {
     <center>
-        <form action="IndexSearch">
+        <form action="Home/IndexSearch">
             <div class="form-group p-3">
                 <input type="text" class="form-control p-3" name="searchTerm" placeholder="Saisir l'étudiant à chercher !">
             </div>
